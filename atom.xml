@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-13T05:55:01.810Z</updated>
+  <updated>2019-08-20T14:06:09.913Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Operating System</title>
+    <link href="http://yoursite.com/2019/08/20/Operating-System/"/>
+    <id>http://yoursite.com/2019/08/20/Operating-System/</id>
+    <published>2019-08-20T09:28:50.000Z</published>
+    <updated>2019-08-20T14:06:09.913Z</updated>
+    
+    <content type="html"><![CDATA[<p>虽然博文标题为操作系统，但实则也是对最近发现的一个问题的记录。</p><p>最近在学操作系统，实验内容就是用代码验证上课时提及的各种算法。在这门课程中，我尝试着不参考网上的代码，完全依照自己对算法的理解去实现。但在两次尝试后发现自身的编程能力还是不够，平均每个算法一百二十行代码，所花时间大概四个半小时。对这样的编程速度是在难以接受，希望能找到解决方案。</p><p>下面以轮转调度算法（下简称RR）为例，寻找编程过程中的缺陷。</p><p>RR实质就是将处理器处理进程的过程划分为一个个时间片，再根据进程到达时间确定执行顺序。执行过程中处理器每次对每个进程处理一个时间片时间，时间耗尽则执行下一进程，该进程移出处理队列，若未完成则需保存当前信息重新进入就绪队列等待，下一次处理接着原有进度，所有进程都像这样依次轮回。</p><p>编程前：</p><p>该算法首先需要输入进程名，到达时间及服务时间。然后是处理数据：1、将各进程按到达时间升序排列，压入队列。2、</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;虽然博文标题为操作系统，但实则也是对最近发现的一个问题的记录。&lt;/p&gt;
+&lt;p&gt;最近在学操作系统，实验内容就是用代码验证上课时提及的各种算法。在这门课程中，我尝试着不参考网上的代码，完全依照自己对算法的理解去实现。但在两次尝试后发现自身的编程能力还是不够，平均每个算法一百二十
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://yoursite.com/tags/computer/"/>
+    
+  </entry>
   
   <entry>
     <title>Game Link</title>
