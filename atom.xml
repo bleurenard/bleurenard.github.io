@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-20T14:06:09.913Z</updated>
+  <updated>2019-09-01T09:13:40.366Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件工程</title>
+    <link href="http://yoursite.com/2019/09/01/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://yoursite.com/2019/09/01/软件工程/</id>
+    <published>2019-09-01T08:08:09.000Z</published>
+    <updated>2019-09-01T09:13:40.366Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>软件工程课程结束，总体感觉很垃圾。这门课程到还好，至少学到了不少专业图表绘制，之前一直想好好学学都没学下去┓( ´∀` )┏，但课设真的没意思，不知道为什么感觉和他们合作很没意思，根本就是糊弄，不知道相互沟通，做事不尽力，而且喜欢扯淡，每次听到那些扯淡的话都很无语，而且感觉有的人真恶心。</p><h1 id="课程总结"><a href="#课程总结" class="headerlink" title="课程总结"></a>课程总结</h1><p>软件设计的基本流程（考试前背烂了( p′︵‵。) ）</p><ol><li>问题分析</li><li>可行性分析</li><li>需求分析</li><li>概要设计</li><li>详细设计</li><li>编码</li><li>测试</li><li>维护</li></ol><h4 id="感慨一下"><a href="#感慨一下" class="headerlink" title="感慨一下"></a>感慨一下</h4><p>编码只占工作量的10%-20%，感觉和游戏开发有点相似，程序员的编码能力其实并不是主要，影响游戏品质的要素还有很多，比如玩法，美术，剧情……，但是现阶段进步最直接的途径还是提高代码能力，等正式加入游戏开发团队了要学的还有很多。</p><h4 id="专业图"><a href="#专业图" class="headerlink" title="专业图"></a>专业图</h4><ol><li><p>系统流程图</p><p>简要描述软件组成，包括一些需要的设备，数据处理，存储等</p></li><li><p>数据流图</p><p>与数据字典一起使用，主要描述了软件中数据的流动状态。</p></li><li><p>数据字典</p></li><li><p>E-R图</p><p>之后数据库建表时必须的，而且有利于理清思路，感觉是对每个对象的初步构想。</p></li><li><p>程序流程图</p><p>就是高中数学里面那种流程图…</p></li><li><p>N-S图</p><p>把程序流程图转换成一张列表的形式。（要注意不同的结构有各自特殊的画法，比如，循环要在外层套上条件）</p></li><li><p>PAD图</p><p>感觉是将程序的具体算法写出来，但太难了，上课的时候有没注意听，所以…┓( ´∀` )┏</p></li><li><p>判定表/树</p><p>特鸡肋的一个东西，明明看一眼就能知道的逻辑还非要画出来，可能涉及到方面多了会有助于思考吧。</p></li><li><p>类图</p><p>最初接触到的专业图，当时看了好半天都没能看懂，而且用的也不好，但这个在面向对象设计的时候真的挺有用的，对程序员的构思帮助极大。</p></li><li><p>用例图</p><p>没太理解是干啥的，反正就知道是那样画的┓( ´∀` )┏</p></li></ol><h4 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h4><p>估测程序复杂度的McCabe方法</p><p>​    使用极为无脑，就是套公式<strong>V(G)=P+1</strong>但需要先将整个程序的伪码写好才能测算。前奏高的一批…</p><p>软件测试方法</p><p>​    白盒测试</p><p>​        一种细化测试，先将软件分模块，再根据模块内代码逻辑设计不同的用例，挺麻烦的。</p><p>​    黑盒测试</p><p>​        写输入看输出，测试各种可能性，出错，不出错都要有。</p><h1 id="课设总结"><a href="#课设总结" class="headerlink" title="课设总结"></a>课设总结</h1><p>课设可以说是学这门课程最大的败笔，队友专业知识太薄弱，而且很难沟通。以后参赛组队时要注意一下，首先不能太难沟通，其次要负责不懂的就应该都问，最后尽可能掌握足够的专业知识。不然说啥都不懂。</p><h4 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h4><ol><li>项目过程中需要多沟通，从这次最后的报告看出来，互相都不知道对方在干什么，存在很大漏洞。</li><li>需要一个能统筹同伴的领导人，我在这方面比较弱，需要多学习，但如果其他人都不行就不能放出去。</li><li>想办法让所有人都尽最大的力量去完成各自的任务。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;软件工程课程结束，总体感觉很垃圾。这门课程到还好，至少学到了不少专业图表绘制，之前一直想好好学学都没学下去┓( ´∀` )┏，但课设真的没意
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://yoursite.com/tags/computer/"/>
+    
+  </entry>
   
   <entry>
     <title>Operating System</title>
