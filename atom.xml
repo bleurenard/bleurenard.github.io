@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-01T09:13:40.366Z</updated>
+  <updated>2019-09-06T01:54:53.413Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git学习</title>
+    <link href="http://yoursite.com/2019/09/06/Git%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2019/09/06/Git学习/</id>
+    <published>2019-09-06T00:50:04.000Z</published>
+    <updated>2019-09-06T01:54:53.413Z</updated>
+    
+    <content type="html"><![CDATA[<p>Git是一种分布式版本控制系统，可以帮助用户记录文件修改信息，必要时还可以恢复到相应版本。更重要的是，Git在很大程度上方便了团队成员间的合作，团队成员间不需要将文件传来传去，而直接在各自的电脑上修改上传，就能达到相互协同的目的。</p><h1 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h1><p>在链接远程仓库时一直报错，本以为是ssh-key出了问题，所以尝试修改ssh-key但没有效果，后来猜想可能是使用的远程仓库是之前练习制作个人博客留下的，已经被链接过了，所以重开了一个仓库终于成功了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Git是一种分布式版本控制系统，可以帮助用户记录文件修改信息，必要时还可以恢复到相应版本。更重要的是，Git在很大程度上方便了团队成员间的合作，团队成员间不需要将文件传来传去，而直接在各自的电脑上修改上传，就能达到相互协同的目的。&lt;/p&gt;
+&lt;h1 id=&quot;问题记录&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://yoursite.com/tags/computer/"/>
+    
+  </entry>
   
   <entry>
     <title>软件工程</title>
