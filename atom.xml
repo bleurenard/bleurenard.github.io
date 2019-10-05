@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-22T03:29:13.143Z</updated>
+  <updated>2019-10-05T02:36:36.039Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenGL学习笔记</title>
+    <link href="http://yoursite.com/2019/10/05/OpenGL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/10/05/OpenGL学习笔记/</id>
+    <published>2019-10-05T02:13:36.000Z</published>
+    <updated>2019-10-05T02:36:36.039Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本文主要记录在OpenGL的第一阶段学习中遇到的各类问题。</p><h2 id="stb-image-h的无法解析外部命令-符号"><a href="#stb-image-h的无法解析外部命令-符号" class="headerlink" title="stb_image.h的无法解析外部命令\符号"></a>stb_image.h的无法解析外部命令\符号</h2><p>一般遇到这种问题会想到是不是哪个外部库忘了链接，但又看了一遍learnOpenGL的教程还是没有看到有需要另外链接外部库的提示。一般有特殊操作时，教程中都会标明（比较良心），所以应该不是外部库的原因，后来在检索时发现大家在使用这个头函数是都会加上一句</p><p><code>#define STB_IMAGE_IMPLEMENTATION</code></p><p>这也的确解决了问题，但原因还是有点迷，本着佛系编程的原则，解决问题就行了，这里就不深究了。</p><p>开玩笑，后来在检索<code>STB_IMAGE_IMPLEMENTATION</code>这段代码后，知乎上有位前辈是这样回答的：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">文件头部包含stb_image.h时，写下面两句话：</span><br><span class="line"></span><br><span class="line">#define STB_IMAGE_IMPLEMENTATION</span><br><span class="line"></span><br><span class="line">#include &quot;stb_image.h&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">通过定义STB_IMAGE_IMPLEMENTATION，预处理器会修改头文件，让其只包含相关的函数定义源码，等于是将这个头文件变为一个`.cpp`文件了。现在只需要在你的程序中包含`stb_image.h`并编译就可以了。（工程中不要放stb_image.c文件，否则会报其他错误）</span><br></pre></td></tr></table></figure><p>我对此的理解是，这个头文件在使用时还是需要链接一个外部库的（因为报错时显示的是error LNK2019,这就是提示未包含某些动态库），而加上这条预处理命令的意义就是将其转换为.c文件，使其在没有链接外部库时也能编译。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;本文主要记录在OpenGL的第一阶段学习中遇到的各类问题。&lt;/p&gt;
+&lt;h2 id=&quot;stb-image-h的无法解析外部命令
+      
+    
+    </summary>
+    
+    
+      <category term="OpenGL" scheme="http://yoursite.com/tags/OpenGL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《闪光少女》--影评</title>
+    <link href="http://yoursite.com/2019/09/30/%E9%97%AA%E5%85%89%E5%B0%91%E5%A5%B3%E5%BD%B1%E8%AF%84/"/>
+    <id>http://yoursite.com/2019/09/30/闪光少女影评/</id>
+    <published>2019-09-30T03:17:51.000Z</published>
+    <updated>2019-10-02T10:35:39.249Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>首先，这并不能算是一篇真正的影评，只是记录一下看完这部电影后的一些感受。</p><p>这部电影是我在爱奇艺上看到的，评分9.1，相当不错的评分，但我却一直没有点开看，原因显而易见，这名字太™俗了，在没看之前我一直以为这是一部刷分烂剧，就像上海某军用设施一样还能被刷到4.3分。现在看来还是我太天真了。</p><p>进入正题，这部电影在情节设定，背景设定方面表现一般，但在题材方面倒是有很多创新之处，比如二次元，B站等年轻元素。其中二次元的介入可以说是这部影片的亮点之一，成功抓住了年轻一代的眼球，针对这一表现有一些不太成熟的想法，似乎当代年轻人更趋向于标签化，</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;首先，这并不能算是一篇真正的影评，只是记录一下看完这部电影后的一些感受。&lt;/p&gt;
+&lt;p&gt;这部电影是我在爱奇艺上看到的，评分9
+      
+    
+    </summary>
+    
+    
+      <category term="movie" scheme="http://yoursite.com/tags/movie/"/>
+    
+  </entry>
   
   <entry>
     <title>Unity资源链接</title>

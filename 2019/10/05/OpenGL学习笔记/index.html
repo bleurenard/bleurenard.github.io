@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="OpenGL,">
 
 
 
@@ -81,14 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="写在前面本文主要记录在OpenGL的第一阶段学习中遇到的各类问题。 stb_image.h的无法解析外部命令\符号一般遇到这种问题会想到是不是哪个外部库忘了链接，但又看了一遍learnOpenGL的教程还是没有看到有需要另外链接外部库的提示。一般有特殊操作时，教程中都会标明（比较良心），所以应该不是外部库的原因，后来在检索时发现大家在使用这个头函数是都会加上一句 #define STB_IMAGE">
+<meta name="keywords" content="OpenGL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenGL学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/10/05/OpenGL学习笔记/index.html">
 <meta property="og:site_name" content="Automne">
+<meta property="og:description" content="写在前面本文主要记录在OpenGL的第一阶段学习中遇到的各类问题。 stb_image.h的无法解析外部命令\符号一般遇到这种问题会想到是不是哪个外部库忘了链接，但又看了一遍learnOpenGL的教程还是没有看到有需要另外链接外部库的提示。一般有特殊操作时，教程中都会标明（比较良心），所以应该不是外部库的原因，后来在检索时发现大家在使用这个头函数是都会加上一句 #define STB_IMAGE">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-08T08:32:36.089Z">
+<meta property="og:updated_time" content="2019-10-05T02:36:36.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="OpenGL学习笔记">
+<meta name="twitter:description" content="写在前面本文主要记录在OpenGL的第一阶段学习中遇到的各类问题。 stb_image.h的无法解析外部命令\符号一般遇到这种问题会想到是不是哪个外部库忘了链接，但又看了一遍learnOpenGL的教程还是没有看到有需要另外链接外部库的提示。一般有特殊操作时，教程中都会标明（比较良心），所以应该不是外部库的原因，后来在检索时发现大家在使用这个头函数是都会加上一句 #define STB_IMAGE">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/05/OpenGL学习笔记/">
 
 
 
 
 
-  <title>tags | Automne</title>
+  <title>OpenGL学习笔记 | Automne</title>
   
 
 
@@ -249,33 +253,151 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/05/OpenGL学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="布鲁塞尔的秋天">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Automne">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">OpenGL学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-05T10:13:36+08:00">
+                2019-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本文主要记录在OpenGL的第一阶段学习中遇到的各类问题。</p>
+<h2 id="stb-image-h的无法解析外部命令-符号"><a href="#stb-image-h的无法解析外部命令-符号" class="headerlink" title="stb_image.h的无法解析外部命令\符号"></a>stb_image.h的无法解析外部命令\符号</h2><p>一般遇到这种问题会想到是不是哪个外部库忘了链接，但又看了一遍learnOpenGL的教程还是没有看到有需要另外链接外部库的提示。一般有特殊操作时，教程中都会标明（比较良心），所以应该不是外部库的原因，后来在检索时发现大家在使用这个头函数是都会加上一句</p>
+<p><code>#define STB_IMAGE_IMPLEMENTATION</code></p>
+<p>这也的确解决了问题，但原因还是有点迷，本着佛系编程的原则，解决问题就行了，这里就不深究了。</p>
+<p>开玩笑，后来在检索<code>STB_IMAGE_IMPLEMENTATION</code>这段代码后，知乎上有位前辈是这样回答的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">文件头部包含stb_image.h时，写下面两句话：</span><br><span class="line"></span><br><span class="line">#define STB_IMAGE_IMPLEMENTATION</span><br><span class="line"></span><br><span class="line">#include &quot;stb_image.h&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">通过定义STB_IMAGE_IMPLEMENTATION，预处理器会修改头文件，让其只包含相关的函数定义源码，等于是将这个头文件变为一个`.cpp`文件了。现在只需要在你的程序中包含`stb_image.h`并编译就可以了。（工程中不要放stb_image.c文件，否则会报其他错误）</span><br></pre></td></tr></table></figure>
+
+<p>我对此的理解是，这个头文件在使用时还是需要链接一个外部库的（因为报错时显示的是error LNK2019,这就是提示未包含某些动态库），而加上这条预处理命令的意义就是将其转换为.c文件，使其在没有链接外部库时也能编译。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/30/闪光少女影评/" rel="next" title="《闪光少女》--影评">
+                <i class="fa fa-chevron-left"></i> 《闪光少女》--影评
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -308,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -369,6 +500,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#stb-image-h的无法解析外部命令-符号"><span class="nav-number">1.1.</span> <span class="nav-text">stb_image.h的无法解析外部命令\符号</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
