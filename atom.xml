@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-21T02:52:43.017Z</updated>
+  <updated>2020-01-05T21:01:00.072Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python回滚</title>
+    <link href="http://yoursite.com/2020/01/06/Python%E5%9B%9E%E6%BB%9A/"/>
+    <id>http://yoursite.com/2020/01/06/Python回滚/</id>
+    <published>2020-01-05T20:52:51.000Z</published>
+    <updated>2020-01-05T21:01:00.072Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。</p><h4 id="PyCharm无法编辑"><a href="#PyCharm无法编辑" class="headerlink" title="PyCharm无法编辑"></a>PyCharm无法编辑</h4><p>由于在安装PyCharm的时候安装了vim扩展包，所以编译器会默认打开vim Emulator。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。
+      
+    
+    </summary>
+    
+    
+      <category term="Program" scheme="http://yoursite.com/tags/Program/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenGL学习笔记</title>
