@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-05T21:01:00.072Z</updated>
+  <updated>2020-01-06T21:24:17.468Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/01/06/Python%E5%9B%9E%E6%BB%9A/"/>
     <id>http://yoursite.com/2020/01/06/Python回滚/</id>
     <published>2020-01-05T20:52:51.000Z</published>
-    <updated>2020-01-05T21:01:00.072Z</updated>
+    <updated>2020-01-06T21:24:17.468Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。</p><h4 id="PyCharm无法编辑"><a href="#PyCharm无法编辑" class="headerlink" title="PyCharm无法编辑"></a>PyCharm无法编辑</h4><p>由于在安装PyCharm的时候安装了vim扩展包，所以编译器会默认打开vim Emulator。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。</p><p>在此定下三个小目标，一、制作贪吃蛇大战；二、制作PVE象棋；三、制作一个简易的数据挖掘项目。</p><h4 id="PyCharm无法编辑"><a href="#PyCharm无法编辑" class="headerlink" title="PyCharm无法编辑"></a>PyCharm无法编辑</h4><p>由于在安装PyCharm的时候安装了vim扩展包，所以编译器会默认打开vim Emulator。</p><h4 id="GEANY没法输出汉字"><a href="#GEANY没法输出汉字" class="headerlink" title="GEANY没法输出汉字"></a>GEANY没法输出汉字</h4><p>由于没有配置默认编码，可以在 <em>编辑—》首选项</em> 中修改默认编码为utf-8，或者在代码开头加上#coding=GBK。</p><p>*注意：修改默认编码在新建时生效，打开老文件还是以前的编码</p>]]></content>
     
     <summary type="html">
     
