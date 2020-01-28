@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Automne">
 <meta property="og:description" content="写在前面突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。 在此定下三个小目标，一、制作贪吃蛇大战；二、制作PVE象棋；三、制作一个简易的数据挖掘项目。 PyCharm无法编辑由于在安装PyCharm的时候安装了vim扩展包，所以编译器会默认打开vim Emulator。 GEANY没法输出汉字由于没有配置默认编码，可以在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-27T19:59:14.992Z">
+<meta property="og:updated_time" content="2020-01-28T20:51:33.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python回滚">
 <meta name="twitter:description" content="写在前面突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。 在此定下三个小目标，一、制作贪吃蛇大战；二、制作PVE象棋；三、制作一个简易的数据挖掘项目。 PyCharm无法编辑由于在安装PyCharm的时候安装了vim扩展包，所以编译器会默认打开vim Emulator。 GEANY没法输出汉字由于没有配置默认编码，可以在">
@@ -344,6 +344,13 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">squares = [value**<span class="number">2</span> <span class="keyword">for</span> value <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</span><br><span class="line">print(squares)</span><br></pre></td></tr></table></figure>
 
 <h4 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h4><p>初学python时，对python的一点理解，python之所以比C语言更容易学就是因为它的规矩（语法）相较于C语言更多，而且它还允许其他开发者修改增加规矩（开源，以及库函数），在一定程度上限制了学习者的方向，更方便初学者理解学习。举个例子，在一座陌生的城市里，如果只有一条路，那就不可能迷路，但如果有很多主路，辅路和岔路，那就很容易迷路了。当然，这只是我现阶段的一点想法，未必正确，若有错误，望各位大佬指正。</p>
+<h4 id="检查列表是否为空"><a href="#检查列表是否为空" class="headerlink" title="检查列表是否为空"></a>检查列表是否为空</h4><p>直接将列表作为条件，为空时，false</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> lists:</span><br><span class="line">	do something</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	this list <span class="keyword">is</span> empty</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<p>将列表长度作为条件，为空时，列表长度为0</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> len(lists):</span><br><span class="line">    do something</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    this list <span class="keyword">is</span> empty</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -518,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PyCharm无法编辑"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">PyCharm无法编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GEANY没法输出汉字"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">GEANY没法输出汉字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表解析"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">列表解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题外话"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">题外话</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PyCharm无法编辑"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">PyCharm无法编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GEANY没法输出汉字"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">GEANY没法输出汉字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表解析"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">列表解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题外话"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">题外话</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检查列表是否为空"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">检查列表是否为空</span></a></li></ol></li></ol></div>
             
 
           </div>
