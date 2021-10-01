@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Automne">
 <meta property="og:description" content="写在前面突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。 在此定下三个小目标，一、制作贪吃蛇大战；二、制作PVE象棋；三、制作一个简易的数据挖掘项目。 PyCharm无法编辑由于在安装PyCharm的时候安装了vim扩展包，所以编译器会默认打开vim Emulator。 GEANY没法输出汉字由于没有配置默认编码，可以在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-23T20:31:41.010Z">
+<meta property="og:updated_time" content="2020-03-22T07:57:57.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python回滚">
 <meta name="twitter:description" content="写在前面突然觉得Python真的很有用，现在准备重新复习一遍Python，所以有了这一系列的博客，记录在学习过程中遇到的问题和想法。 在此定下三个小目标，一、制作贪吃蛇大战；二、制作PVE象棋；三、制作一个简易的数据挖掘项目。 PyCharm无法编辑由于在安装PyCharm的时候安装了vim扩展包，所以编译器会默认打开vim Emulator。 GEANY没法输出汉字由于没有配置默认编码，可以在">
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-06T04:52:51+01:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-06T04:52:51+08:00">
                 2020-01-06
               </time>
             
@@ -380,7 +380,38 @@
 
 <p>这种方式不需要注意实参的顺序</p>
 <p>python在构造函数时可以设定默认参数，这很神奇，我也不记得其他语言里有没有这种设定，我只记得默认构造函数</p>
-<h4 id="Python里的默认方法-init-前后都是双下划线"><a href="#Python里的默认方法-init-前后都是双下划线" class="headerlink" title="Python里的默认方法__init__()前后都是双下划线"></a>Python里的默认方法<code>__init__()</code>前后都是双下划线</h4>
+<h4 id="Python里的默认方法-init-前后都是双下划线"><a href="#Python里的默认方法-init-前后都是双下划线" class="headerlink" title="Python里的默认方法__init__()前后都是双下划线"></a>Python里的默认方法<code>__init__()</code>前后都是双下划线</h4><h4 id="两个概念不清晰"><a href="#两个概念不清晰" class="headerlink" title="两个概念不清晰"></a>两个概念不清晰</h4><ol>
+<li>类方法里面的self的作用到底是什么</li>
+<li>模块的定义（是否就是名字空间）</li>
+</ol>
+<h4 id="replace-方法"><a href="#replace-方法" class="headerlink" title="replace()方法"></a>replace()方法</h4><p><code>str.replace(&quot;a&quot;, &quot;b&quot;)</code></p>
+<p>只做修改，不会将修改后的字符串保存</p>
+<h4 id="Python写文件时注意’w’和’a’"><a href="#Python写文件时注意’w’和’a’" class="headerlink" title="Python写文件时注意’w’和’a’"></a>Python写文件时注意’w’和’a’</h4><p>‘w’模式会把原有内容清空，然后写入新内容，值得注意的是，如果在同一个with模块下，Python会将其认作一次输入</p>
+<p>‘a’模式会在原有基础上添加新内容</p>
+<h4 id="Python中如何判断变量是否为数字"><a href="#Python中如何判断变量是否为数字" class="headerlink" title="Python中如何判断变量是否为数字"></a>Python中如何判断变量是否为数字</h4><p>普通正整数可以通过<code>isdigit()</code>函数判断</p>
+<p>浮点数及负数等情况可以使用以下代码判断：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	float(num)</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">	print(<span class="string">"please entre a number."</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Python中自定义异常"><a href="#Python中自定义异常" class="headerlink" title="Python中自定义异常"></a>Python中自定义异常</h4><p>定义新的类，让它继承自 <code>Exception</code> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MoveError</span><span class="params">(Exceeption)</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="CSV文件的读取"><a href="#CSV文件的读取" class="headerlink" title="CSV文件的读取"></a>CSV文件的读取</h4><ol>
+<li><p>将文件存储到一个对象f_obj中：</p>
+<p><code>with open(file_path) as f_obj</code></p>
+</li>
+<li><p>将对象关联一个阅读器reader：</p>
+<p><code>reader = csv.reader(f_obj)</code></p>
+</li>
+<li><p>利用next函数读取下一行文本：</p>
+<p><code>header_row = next(reader)</code></p>
+</li>
+</ol>
+<h4 id="执行以下命令可以创建一个新的python目录"><a href="#执行以下命令可以创建一个新的python目录" class="headerlink" title="执行以下命令可以创建一个新的python目录"></a>执行以下命令可以创建一个新的python目录</h4><p><code>python -m venv filename</code></p>
+<h4 id="关于urls-py文件中出现的include-中没有提供app-name"><a href="#关于urls-py文件中出现的include-中没有提供app-name" class="headerlink" title="关于urls.py文件中出现的include()中没有提供app_name"></a>关于urls.py文件中出现的include()中没有提供app_name</h4><p>解决方案是</p>
+<p><code>url(r&#39;&#39;, include((&#39;learning_logs.urls&#39;, &#39;learning_logs&#39;), namespace=&#39;learning_logs&#39;))</code></p>
+<p>从错误提示中可以看出这个函数需要提供一个二元组</p>
+<h4 id="找不到reverse-函数"><a href="#找不到reverse-函数" class="headerlink" title="找不到reverse()函数"></a>找不到reverse()函数</h4><p>现在的Django版本不能用<code>from django.core.urlresolvers import reverse</code>，改用<code>from django.urls import reverse</code></p>
+
       
     </div>
     
@@ -554,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PyCharm无法编辑"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">PyCharm无法编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GEANY没法输出汉字"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">GEANY没法输出汉字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表解析"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">列表解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题外话"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">题外话</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检查列表是否为空"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">检查列表是否为空</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#换行（-n）"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">换行（\n）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字典遍历"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">字典遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字典，列表概念混乱"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">字典，列表概念混乱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个有趣的发现"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">一个有趣的发现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数参数传递"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">函数参数传递</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python里的默认方法-init-前后都是双下划线"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">Python里的默认方法__init__()前后都是双下划线</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PyCharm无法编辑"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">PyCharm无法编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GEANY没法输出汉字"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">GEANY没法输出汉字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表解析"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">列表解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题外话"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">题外话</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检查列表是否为空"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">检查列表是否为空</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#换行（-n）"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">换行（\n）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字典遍历"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">字典遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字典，列表概念混乱"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">字典，列表概念混乱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个有趣的发现"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">一个有趣的发现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数参数传递"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">函数参数传递</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python里的默认方法-init-前后都是双下划线"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">Python里的默认方法__init__()前后都是双下划线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#两个概念不清晰"><span class="nav-number">1.0.0.12.</span> <span class="nav-text">两个概念不清晰</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#replace-方法"><span class="nav-number">1.0.0.13.</span> <span class="nav-text">replace()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python写文件时注意’w’和’a’"><span class="nav-number">1.0.0.14.</span> <span class="nav-text">Python写文件时注意’w’和’a’</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python中如何判断变量是否为数字"><span class="nav-number">1.0.0.15.</span> <span class="nav-text">Python中如何判断变量是否为数字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python中自定义异常"><span class="nav-number">1.0.0.16.</span> <span class="nav-text">Python中自定义异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSV文件的读取"><span class="nav-number">1.0.0.17.</span> <span class="nav-text">CSV文件的读取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行以下命令可以创建一个新的python目录"><span class="nav-number">1.0.0.18.</span> <span class="nav-text">执行以下命令可以创建一个新的python目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于urls-py文件中出现的include-中没有提供app-name"><span class="nav-number">1.0.0.19.</span> <span class="nav-text">关于urls.py文件中出现的include()中没有提供app_name</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#找不到reverse-函数"><span class="nav-number">1.0.0.20.</span> <span class="nav-text">找不到reverse()函数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -574,7 +605,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
